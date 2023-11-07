@@ -49,7 +49,7 @@ const person1: Owner2="car"
 const person2: Owner="car"
 
 
-function getPropertyValue=<X,Y extends keyof X>(obj: X, key:Y)=>{
+const getPropertyValue=<X,Y extends keyof X>(obj: X, key:Y)=>{
        return obj[key]
 }
 
