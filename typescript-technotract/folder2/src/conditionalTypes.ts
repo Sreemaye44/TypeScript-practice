@@ -5,3 +5,15 @@ type b1=undefined;
 type x= a1 extends null? true :false  //true //x is a conditional type
 
 type y= a1 extends null ? true : b1 extends undefined? undefined :any //undefined
+
+type Sheikh={
+    bike: string;
+    car: string;
+    ship: string;
+}
+//car ase kina/bike ase kina/ship ase kina/tractor ase kina
+
+// type CheckVehicle<T>= T extends "bike"| "car"|"ship"? true:false
+ type CheckVehicle<T>= T extends keyof Sheikh? true:false
+
+type hasBike=CheckVehicle<"car">
